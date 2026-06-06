@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Management</title>
+</head>
+<body>
+
+<h2>Attendance Management</h2>
+
+<button onclick="markAttendance()">Mark Attendance</button>
+<button onclick="showTotal()">Show Total</button>
+
+<pre id="output"></pre>
+
+<script>
+    let attendanceCount = 0;
+
+    function markAttendance() {
+        attendanceCount++;
+        document.getElementById("output").textContent +=
+            "Attendance marked.\n";
+    }
+
+    function showTotal() {
+        document.getElementById("output").textContent +=
+            "Total attended classes: " + attendanceCount;
+    }
+</script>
+
+</body>
+</html>
