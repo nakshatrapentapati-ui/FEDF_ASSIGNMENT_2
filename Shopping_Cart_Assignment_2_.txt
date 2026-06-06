@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+<h2>Shopping Cart</h2>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+<button onclick="showItems()">Show Item Count</button>
+
+<pre id="output"></pre>
+
+<script>
+    let itemCount = 0;
+
+    function addItem() {
+        itemCount++;
+        document.getElementById("output").textContent +=
+            "Item added.\n";
+    }
+
+    function removeItem() {
+        if (itemCount > 0) {
+            itemCount--;
+            document.getElementById("output").textContent +=
+                "Item removed.\n";
+        }
+    }
+
+    function showItems() {
+        document.getElementById("output").textContent +=
+            "Current number of items in cart: " + itemCount + "\n";
+    }
+</script>
+
+</body>
+</html>
